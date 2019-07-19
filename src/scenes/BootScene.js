@@ -5,12 +5,13 @@ class BootScene extends Phaser.Scene {
     })
   }
   preload () {
+    let logo = this.load.image('logo', 'src/sprites/logo.png')
 
   }
   create () {
-
+    this.scene.start('PreloadScene')
   }
   update () {
-    
+
   }
 }

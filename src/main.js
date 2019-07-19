@@ -4,8 +4,8 @@ const config = {
   height: 600,
   parent: 'container',
   scene: [
-    PreloadScene,
     BootScene,
+    PreloadScene,
     TitleScene,
     GameScene
   ]

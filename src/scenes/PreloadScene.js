@@ -5,12 +5,14 @@ class PreloadScene extends Phaser.Scene {
     })
   }
   preload () {
+    let logo = this.add.image(400, 200, 'logo')
+    logo.setScale(0.1)
 
   }
   create () {
-
+    console.log('Preload Scene')
   }
   update () {
-    
+
   }
 }
