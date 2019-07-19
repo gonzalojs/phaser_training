@@ -8,7 +8,7 @@ class TitleScene extends Phaser.Scene {
 
   }
   create () {
-
+    console.log('Title Scene!')
   }
   update () {
     

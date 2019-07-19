@@ -57,22 +57,40 @@ class PreloadScene extends Phaser.Scene {
       progressBar.fillRect(250, 280, 300 * value, 30)
     })
 
-    //update file progress text
     this.load.on('fileprogress', () => {
+      assetText.setText('Loading asset: ' + File.key)
+    })
+
+    //remove progress bar when complete
+    this.load.on('complete', function () {
       progressBar.destroy()
       progressBox.destroy()
       loadingText.destroy()
       percenText.destroy()
       assetText.destroy()
-    })
+      this.ready()
+    }.bind(this))
+
+    this.timedEvent = this.time.delayedCall(3000, this.ready, [], this)
 
     //load assets for the game
-
+    this.load.image('logos', 'src/sprites/logos.jpg')
   }
   create () {
     console.log('Preload Scene')
   }
   update () {
 
+  }
+
+  init () {
+    this.readyCount = 0
+  }
+
+  ready () {
+    this.readyCount++
+    if (this.readyCount === 2) {
+      this.scene.start('TitleScene')
+    }
   }
 }
