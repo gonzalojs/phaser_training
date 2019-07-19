@@ -11,7 +11,10 @@ class TitleScene extends Phaser.Scene {
     console.log('Title Scene!')
 
     this.gameButton = this.add.sprite(100, 200, 'button').setInteractive()
-    this.gameButton.setScale(0.15)
+    this.resize(this.gameButton, 200, 50)
+/*     this.gameButton.displayWidth = 100
+    this.gameButton.displayHeight = 50 */
+/*     this.gameButton.setScale(0.15) */
     this.centerButton(this.gameButton, 1)
 
     this.gameText = this.add.text(0, 0, 'Play', {
@@ -30,7 +33,7 @@ class TitleScene extends Phaser.Scene {
 
     //Options
     this.optionButton = this.add.sprite(300, 200, 'button').setInteractive()
-    this.optionButton.setScale(0.2)
+    this.resize(this.optionButton, 200, 80)
     this.centerButton(this.optionButton)
 
     this.optionText = this.add.text(0, 0, 'Options', {
@@ -61,6 +64,11 @@ class TitleScene extends Phaser.Scene {
       gameText,
       gameButton
     )
+  }
+
+  resize (i, w, h) {
+    i.displayWidth = w
+    i.displayHeight = h
   }
 
 }
