@@ -75,6 +75,10 @@ class PreloadScene extends Phaser.Scene {
 
     //load assets for the game
     this.load.image('logos', 'src/sprites/logos.jpg')
+    for (let i = 0; i < 50; i++) {
+      this.load.image('logo'+i, 'src/sprites/logos.jpg')
+    }
+
   }
   create () {
     console.log('Preload Scene')
