@@ -8,7 +8,7 @@ class GameScene extends Phaser.Scene {
 
   }
   create () {
-
+    console.log('Game Scene!')
   }
   update () {
     

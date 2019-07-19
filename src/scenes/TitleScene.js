@@ -11,7 +11,7 @@ class TitleScene extends Phaser.Scene {
     console.log('Title Scene!')
 
     this.gameButton = this.add.sprite(100, 200, 'button').setInteractive()
-    this.gameButton.setScale(0.2)
+    this.gameButton.setScale(0.15)
     this.centerButton(this.gameButton, 1)
 
     this.gameText = this.add.text(0, 0, 'Play', {
@@ -21,12 +21,27 @@ class TitleScene extends Phaser.Scene {
     this.centerButtonText(this.gameText, this.gameButton)
 
     this.gameButton.on('pointerdown', function (pointer) {
-      this.scene.start('Game')
+      this.scene.start('GameScene')
     }.bind(this))
 
     this.input.on('pointerover', function (event, gameObject) {
       gameObject[0].setTexture('button')
     })
+
+    //Options
+    this.optionButton = this.add.sprite(300, 200, 'button').setInteractive()
+    this.optionButton.setScale(0.2)
+    this.centerButton(this.optionButton)
+
+    this.optionText = this.add.text(0, 0, 'Options', {
+      fontSize: '32px',
+      fill: '#fff'
+    })
+    this.centerButtonText(this.optionText, this.optionButton)
+
+    this.optionButton.on('pointerdown', function (pointer) {
+      this.scene.start('Options')
+    }.bind(this))
 
 
   }
