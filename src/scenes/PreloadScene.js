@@ -74,6 +74,7 @@ class PreloadScene extends Phaser.Scene {
     this.timedEvent = this.time.delayedCall(3000, this.ready, [], this)
 
     //load assets for the game
+    this.load.image('back', 'src/sprites/back.png')
     this.load.image('logos', 'src/sprites/logos.jpg')
     this.load.image('button', 'src/sprites/blue_button.png')
     for (let i = 0; i < 50; i++) {
