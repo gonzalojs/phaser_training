@@ -49,7 +49,7 @@ class TitleScene extends Phaser.Scene {
 
   }
   update () {
-    
+
   }
 
   centerButton (gameObject, offset = 0) {
