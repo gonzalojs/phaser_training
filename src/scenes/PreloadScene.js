@@ -78,6 +78,8 @@ class PreloadScene extends Phaser.Scene {
     this.load.image('back', 'src/sprites/back.png')
     this.load.image('logos', 'src/sprites/logos.jpg')
     this.load.image('button', 'src/sprites/blue_button.png')
+    this.load.image('player', 'src/sprites/player.png')
+    this.load.image('coin', 'src/sprites/coin.png')
     for (let i = 0; i < 50; i++) {
       this.load.image('logos'+i, 'src/sprites/logos.jpg')
     }

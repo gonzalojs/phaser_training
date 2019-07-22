@@ -7,8 +7,12 @@ const config = {
     BootScene,
     PreloadScene,
     TitleScene,
-    GameScene
-  ]
+    GameScene,
+    LesscakeScene
+  ],
+  physics: {
+    default: 'arcade'
+  },
 }
 
 const game = new Phaser.Game(config)

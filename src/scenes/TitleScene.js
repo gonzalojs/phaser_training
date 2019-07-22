@@ -12,9 +12,7 @@ class TitleScene extends Phaser.Scene {
 
     this.gameButton = this.add.sprite(100, 200, 'button').setInteractive()
     this.resize(this.gameButton, 200, 50)
-/*     this.gameButton.displayWidth = 100
-    this.gameButton.displayHeight = 50 */
-/*     this.gameButton.setScale(0.15) */
+
     this.centerButton(this.gameButton, 1)
 
     this.gameText = this.add.text(0, 0, 'Play', {
@@ -43,7 +41,7 @@ class TitleScene extends Phaser.Scene {
     this.centerButtonText(this.optionText, this.optionButton)
 
     this.optionButton.on('pointerdown', function (pointer) {
-      this.scene.start('Options')
+      this.scene.start('LesscakeScene')
     }.bind(this))
 
 
