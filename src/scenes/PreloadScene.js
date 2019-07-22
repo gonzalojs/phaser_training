@@ -100,7 +100,8 @@ class PreloadScene extends Phaser.Scene {
     this.readyCount++
     if (this.readyCount === 2) {
       console.log('ready')
-      this.scene.start('TitleScene')
+      /* this.scene.start('TitleScene') */
+      this.scene.start('LesscakeScene')
     }
   }
 }
