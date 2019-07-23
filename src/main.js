@@ -8,7 +8,8 @@ const config = {
     PreloadScene,
     TitleScene,
     GameScene,
-    LesscakeScene
+    LesscakeScene,
+    DudeScene
   ],
   physics: {
     default: 'arcade'

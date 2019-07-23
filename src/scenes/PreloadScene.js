@@ -80,10 +80,14 @@ class PreloadScene extends Phaser.Scene {
     this.load.image('button', 'src/sprites/blue_button.png')
     this.load.image('player', 'src/sprites/player.png')
     this.load.image('coin', 'src/sprites/coin.png')
-    for (let i = 0; i < 50; i++) {
+    this.load.spritesheet('dude', 'src/sprites/dude.png', {
+      frameWidth: 32,
+      frameHeight: 48
+    })
+/*     for (let i = 0; i < 50; i++) {
       this.load.image('logos'+i, 'src/sprites/logos.jpg')
     }
-
+ */
   }
   create () {
     console.log('Preload Scene')
@@ -101,7 +105,7 @@ class PreloadScene extends Phaser.Scene {
     if (this.readyCount === 2) {
       console.log('ready')
       /* this.scene.start('TitleScene') */
-      this.scene.start('LesscakeScene')
+      this.scene.start('DudeScene')
     }
   }
 }
