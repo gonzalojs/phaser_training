@@ -84,8 +84,8 @@ class PreloadScene extends Phaser.Scene {
       frameWidth: 32,
       frameHeight: 48
     })
-    this.load.audio('pickup', 'src/sounds/item-pickup.ogg')
-    this.load.audio('bonus', 'src/sounds/bonus.wav')
+    this.load.audio('pickup', 'src/sounds/pickup.wav')
+    this.load.audio('bonus', 'src/sounds/item-pickup.ogg')
 /*     for (let i = 0; i < 50; i++) {
       this.load.image('logos'+i, 'src/sprites/logos.jpg')
     }
