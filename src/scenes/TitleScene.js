@@ -41,7 +41,7 @@ class TitleScene extends Phaser.Scene {
     this.centerButtonText(this.optionText, this.optionButton)
 
     this.optionButton.on('pointerdown', function (pointer) {
-      this.scene.start('LesscakeScene')
+      this.scene.start('GameScene')
     }.bind(this))
 
 

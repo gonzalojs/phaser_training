@@ -63,6 +63,10 @@ class LesscakeScene extends Phaser.Scene {
     //increment the score
     this.score += 10
 
+    if (this.score % 100 === 0) {
+      this.sound.play('bonus')
+    }
+
     //display updated score
     this.scoreNumber.setText(this.score)
 
@@ -82,5 +86,7 @@ class LesscakeScene extends Phaser.Scene {
       scaleY: 1.8, //scale horizontally by 20%
       yoyo: true, // at the end, go back to original scale
     })
+
+    this.sound.play('pickup')
   }
 }
