@@ -91,13 +91,14 @@ class PreloadScene extends Phaser.Scene {
     this.load.audio('click', 'src/sounds/mouseclick1.ogg')
 
     //menu ui
-    this.load.image('blue_btn', '../sprites/blue_button00.png')
-    this.load.image('green_btn', '../sprites/green_button00.png')
-    this.load.image('amarillo_btn', '../sprites/yellow_button00.png')
-    this.load.image('orange_btn', '../sprites/red_button12.png')
-    this.load.image('green_block', '../sprites/green_button10.png')
-    this.load.image('orange_block', '../sprites/red_button08.png')
-    this.load.image('amarillo_block', '../sprites/yellow_button11.png')
+    this.load.image('blue_btn', 'src/sprites/blue_button00.png')
+    this.load.image('green_btn', 'src/sprites/green_button00.png')
+    this.load.image('amarillo_btn', 'src/sprites/yellow_button00.png')
+    this.load.image('orange_btn', 'src/sprites/red_button12.png')
+    this.load.image('green_block', 'src/sprites/green_button10.png')
+    this.load.image('orange_block', 'src/sprites/red_button08.png')
+    this.load.image('amarillo_block', 'src/sprites/yellow_button11.png')
+    this.load.image('grey_panel', 'src/sprites/grey_panel.png')
 
 
 
@@ -123,7 +124,7 @@ class PreloadScene extends Phaser.Scene {
     if (this.readyCount === 2) {
       console.log('ready')
       /* this.scene.start('TitleScene') */
-      this.scene.start('TitleScene')
+      this.scene.start('MenuScene')
     }
   }
 }
