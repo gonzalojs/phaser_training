@@ -99,6 +99,10 @@ class PreloadScene extends Phaser.Scene {
     this.load.image('orange_block', 'src/sprites/red_button08.png')
     this.load.image('amarillo_block', 'src/sprites/yellow_button11.png')
     this.load.image('grey_panel', 'src/sprites/grey_panel.png')
+    this.load.image('top_panel', 'src/sprites/dropdownTop.png')
+    this.load.image('mid_panel', 'src/sprites/dropdownMid.png')
+    this.load.image('bottom_panel', 'src/sprites/dropdownBottom.png')
+    this.load.image
 
 
 
