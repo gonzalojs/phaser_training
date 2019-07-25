@@ -102,7 +102,7 @@ class PreloadScene extends Phaser.Scene {
     this.load.image('top_panel', 'src/sprites/dropdownTop.png')
     this.load.image('mid_panel', 'src/sprites/dropdownMid.png')
     this.load.image('bottom_panel', 'src/sprites/dropdownBottom.png')
-    this.load.image
+
 
 
 

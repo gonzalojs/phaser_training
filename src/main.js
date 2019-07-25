@@ -13,7 +13,11 @@ const config = {
     MenuScene
   ],
   physics: {
-    default: 'arcade'
+    default: 'arcade',
+    arcade: {
+      debug: true,
+      gravity: { y: 200}
+    }
   },
 }
 
