@@ -30,7 +30,6 @@ class LesscakeScene extends Phaser.Scene {
   }
 
   update () {
-
     //overlaping player and coin
     if (this.physics.overlap(this.player, this.coin)) {
       //call hit

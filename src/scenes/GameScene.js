@@ -45,9 +45,14 @@ class GameScene extends Phaser.Scene {
 
     this.lesscakeButton.on('pointerdown', function (pointer) {
       this.scene.start('LesscakeScene')
+      this.click()
     }.bind(this))
   }
   update () {
     
+  }
+
+  click () {
+    this.sound.play('click')
   }
 }

@@ -9,7 +9,8 @@ const config = {
     TitleScene,
     GameScene,
     LesscakeScene,
-    DudeScene
+    DudeScene,
+    MenuScene
   ],
   physics: {
     default: 'arcade'

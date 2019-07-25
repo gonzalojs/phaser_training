@@ -78,6 +78,8 @@ class PreloadScene extends Phaser.Scene {
     this.load.image('back', 'src/sprites/back.png')
     this.load.image('logos', 'src/sprites/logos.jpg')
     this.load.image('button', 'src/sprites/blue_button.png')
+    this.load.image('bluebtn', 'src/sprites/blue_button13.png')
+    this.load.image('greenbtn', 'src/sprites/green_button13.png')
     this.load.image('player', 'src/sprites/player.png')
     this.load.image('coin', 'src/sprites/coin.png')
     this.load.spritesheet('dude', 'src/sprites/dude.png', {
@@ -86,6 +88,20 @@ class PreloadScene extends Phaser.Scene {
     })
     this.load.audio('pickup', 'src/sounds/pickup.wav')
     this.load.audio('bonus', 'src/sounds/item-pickup.ogg')
+    this.load.audio('click', 'src/sounds/mouseclick1.ogg')
+
+    //menu ui
+    this.load.image('blue_btn', '../sprites/blue_button00.png')
+    this.load.image('green_btn', '../sprites/green_button00.png')
+    this.load.image('amarillo_btn', '../sprites/yellow_button00.png')
+    this.load.image('orange_btn', '../sprites/red_button12.png')
+    this.load.image('green_block', '../sprites/green_button10.png')
+    this.load.image('orange_block', '../sprites/red_button08.png')
+    this.load.image('amarillo_block', '../sprites/yellow_button11.png')
+
+
+
+
 /*     for (let i = 0; i < 50; i++) {
       this.load.image('logos'+i, 'src/sprites/logos.jpg')
     }
