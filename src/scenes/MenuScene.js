@@ -1,4 +1,4 @@
-let zone, minizone, otrazone;
+let zone, minizone, otrazone, botzone, area, sml, sml2;
 
 class MenuScene extends Phaser.Scene {
   constructor () {
@@ -8,27 +8,56 @@ class MenuScene extends Phaser.Scene {
   }
 
   preload () {
+    console.log('Menu Scene!')
     this.cameras.main.setBackgroundColor('#FFD700')
   }
 
   create () {
-    console.log('Menu Scene!')
-    zone = this.add.zone(400, 300).setSize(350, 450)
-    minizone = this.add.zone(0, 0).setSize(150, 200)
-    otrazone = this.add.zone(0, 0).setSize(250, 200)
+    //botones aer que tal
+    const blue_btn = this.add.image(0, 0, 'blue_btn')
+    const green_block = this.add.image(0, 0, 'green_block')
+    const orange_block = this.add.image(0, 0, 'orange_block')
+
+    //mini = top; otra = mid
+    area = this.add.zone(400, 300, 800, 600)
+    zone = this.add.zone(0, 0).setSize(350, 450)
+    minizone = this.add.zone(0, 0).setSize(350, 150)
+    otrazone = this.add.zone(0, 0).setSize(350, 150)
+    botzone = this.add.zone(0, 0).setSize(350, 150)
+    sml = this.add.zone(0, 0).setSize(175, 75)
+    sml2 = this.add.zone(0, 0).setSize(175, 75)
     this.physics.world.enable(zone, 0)
     this.physics.world.enable(minizone, 0)
     this.physics.world.enable(otrazone, 0)
+    this.physics.world.enable(botzone, 0)
+    this.physics.world.enable(sml, 0)
+    this.physics.world.enable(sml2, 0)
     zone.body.setAllowGravity(false)
     zone.body.moves = false
     minizone.body.moves = false
     otrazone.body.moves = false
+    botzone.body.moves = false
+    sml.body.moves = false
+    sml2.body.moves = false
     zone.body.debugBodyColor = '#000080'
     minizone.body.debugBodyColor = '#FFFFFF'
     otrazone.body.debugBodyColor = '#000000'
+    botzone.body.debugBodyColor = '#000000'
+    sml.body.debugBodyColor = '#000000'
+    sml2.body.debugBodyColor = '#000000'
 
-    Phaser.Display.Align.In.TopLeft(minizone, zone)
-    Phaser.Display.Align.In.BottomRight(otrazone, zone)
+    Phaser.Display.Align.In.Center(zone, area)
+    Phaser.Display.Align.In.TopCenter(minizone, zone)
+    Phaser.Display.Align.In.Center(otrazone, zone)
+    Phaser.Display.Align.In.BottomCenter(botzone, zone)
+    Phaser.Display.Align.In.LeftCenter(sml, otrazone)
+    Phaser.Display.Align.In.RightCenter(sml2, otrazone)
+
+    //button display
+    Phaser.Display.Align.In.Center(blue_btn, minizone)
+    Phaser.Display.Align.In.Center(green_block, sml)
+    Phaser.Display.Align.In.Center(orange_block, sml2)
+
 
 
 
