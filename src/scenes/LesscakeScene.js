@@ -16,6 +16,9 @@ class LesscakeScene extends Phaser.Scene {
 
     this.coin = this.physics.add.sprite(300, 300, 'coin')
 
+    this.player.body.setAllowGravity(false)
+    this.coin.body.setAllowGravity(false)
+
     //player movement
     this.arrow = this.input.keyboard.createCursorKeys()
 
@@ -27,6 +30,16 @@ class LesscakeScene extends Phaser.Scene {
     }
     this.scoreText = this.add.text(20, 20, `score: `, style)
     this.scoreNumber = this.add.text(80, 20, this.score, style)
+
+    let FKey = this.input.keyboard.addKey('F')
+
+    FKey.on('down', function () {
+      if (game.scale.isFullscreen) {
+        game.scale.stopFullscreen()
+      } else {
+        game.scale.startFullscreen()
+      }
+    })
   }
 
   update () {
